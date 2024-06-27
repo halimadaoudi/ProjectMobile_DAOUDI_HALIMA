@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="primary">#0f706e</color>
+    <color name="colorActive">#6200EE</color>
+    <color name="colorInactive">#757575</color>
+    <color name="yourColorForNavigationBar">#BB86FC</color>
+    <color name="icon_color">#0f706e</color>
+
+</resources>

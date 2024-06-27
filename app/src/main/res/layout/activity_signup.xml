@@ -1,0 +1,234 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="361dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/playfair_bold"
+        android:gravity="center"
+        android:text="Créer Votre Compte"
+        android:textColor="#0f706e"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lightTextView"
+        android:layout_width="340dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/playfair_regular"
+        android:gravity="center"
+        android:text="Rejoignez-nous en quelques étapes simples et découvrez tout ce que nous avons à vous offrir !"
+        android:textColor="#0f706e"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/ic_username"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/playfair_regular"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/lightTextView"
+        tools:layout_editor_absoluteX="13dp" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserName"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/playfair_regular"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/UserName"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/ic_password"
+        android:drawableRight="@drawable/ic_hide"
+        android:drawablePadding="15dp"
+
+        android:fontFamily="@font/playfair_regular"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/playfair_regular"
+        android:hint="Numéro de téléphone"
+        android:inputType="phone"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNumber"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_genre"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="8dp" />
+
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/gender_options" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1"
+        tools:layout_editor_absoluteX="-29dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Icône à gauche -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_study"
+                android:layout_gravity="center_vertical"
+               android:paddingEnd="8dp" />
+
+            <!-- Spinner -->
+            <Spinner
+                android:id="@+id/fieldSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/filiere_options"
+                 />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/sign_in_button_background"
+        android:fontFamily="@font/playfair_regular"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+    <TextView
+        android:id="@+id/alreadyHaveAccountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/playfair_regular"
+        android:text="Vous avez déjà un compte ?"
+        android:textColor="#0f706e"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpButton" />
+
+    <TextView
+        android:id="@+id/signInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/playfair_regular"
+        android:text="@string/sign_in"
+        android:textColor="#007AFF"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/alreadyHaveAccountTextView"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

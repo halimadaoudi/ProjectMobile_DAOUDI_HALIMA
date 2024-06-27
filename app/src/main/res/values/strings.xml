@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Projet_DAOUDI_HALIMA</string>
+    <string name="welcome_message">Bienvenue de nouveau!</string>
+    <string name="sign_up">"S'inscrire"</string>
+    <string name="sign_in">Se Connecter</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="filiere_options">
+        <item>Informatique</item>
+        <item>Electronique</item>
+        <item>Mécanique</item>
+        <item>Génie civil</item>
+        <item>Chimie</item>
+    </string-array>
+</resources>
